@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ExpenseFlow AI
 
-## Getting Started
+A premium, production-ready SaaS expense tracker with a Linear/Vercel/Stripe-grade UI. Track expenses, plan budgets, scan receipts, and unlock AI-powered insights — built with Next.js, React 19, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## ✨ Features
+
+- **Dashboard** — today/week/month/total expenses, current balance, remaining budget, savings
+- **Expense management** — CRUD, duplicate, notes, tags, receipts, 10 categories, 8 payment methods (Cash, Bank, bKash, Nagad, Rocket, PayPal…)
+- **Income tracker** — salary, freelancing, business, bonus, investment, other
+- **Budget planner** — animated progress bars, over-budget alerts and warning badges
+- **Bill reminders** — 3 days / 1 day / due-today states, recurring frequency
+- **Analytics** — spending trends, category pie, income vs expense, 6 key statistics
+- **AI insights** — generated from your real data (swap in Claude for live generation)
+- **Receipt scanner** — simulated AI scan that auto-fills the expense form
+- **Savings goals** — targets with contributions and progress
+- **Reports** — daily/weekly/monthly/yearly/custom with CSV, Excel, and PDF export
+- **Settings** — profile, currency, theme, timezone, language
+- **Dark & light mode**, glassmorphism, skeleton loading, empty states, responsive mobile-first layout
+
+## 🚀 Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). The app ships with realistic demo data and persists everything to `localStorage` — no setup required.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> Log in via `/login` (pre-filled demo credentials) or create an account at `/register`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧱 Tech stack
 
-## Learn More
+Next.js (App Router) · React 19 · TypeScript · Tailwind CSS v4 · Framer Motion · Recharts · React Hook Form + Zod · Lucide
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/app            # routes: /, /login, /register, /forgot-password, /dashboard/*
+src/components     # ui primitives, landing sections, dashboard widgets
+src/lib            # data store, analytics, formatting, theme
+src/types          # domain types & constants
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🗺️ Roadmap
 
-## Deploy on Vercel
+MongoDB + Mongoose, NextAuth (Google + email), Cloudinary uploads, Claude OCR + insights, Stripe + SSLCommerz billing, team workspace, and an admin panel. See [PLAN.md](./PLAN.md) for the full plan.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧑‍💻 Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Command | Description |
+|---|---|
+| `npm run dev` | Start dev server (Turbopack) |
+| `npm run build` | Production build |
+| `npm run start` | Serve production build |
+| `npm run lint` | ESLint |
