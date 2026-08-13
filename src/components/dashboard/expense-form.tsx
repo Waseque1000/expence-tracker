@@ -217,7 +217,7 @@ export function ExpenseForm({
               disabled={scanning}
               className={cn(
                 "flex h-10 w-full items-center justify-center gap-2 rounded-xl border border-dashed border-[var(--input)] text-sm text-[var(--muted-foreground)] transition-colors hover:border-[var(--primary)] hover:text-[var(--primary)] cursor-pointer disabled:opacity-50",
-                receipt && "border-solid border-emerald-500/40 text-emerald-600 dark:text-emerald-400"
+                receipt && "border-solid border-emerald-500/40 text-emerald-600"
               )}
             >
               {scanning ? (

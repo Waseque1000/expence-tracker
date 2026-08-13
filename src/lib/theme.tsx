@@ -1,24 +1,14 @@
 "use client";
 
 import React, { createContext, useCallback, useContext, useEffect, useMemo } from "react";
-import { useStore } from "@/lib/store";
-
 type Theme = "light" | "dark";
 
 const ThemeContext = createContext<{ theme: Theme; toggle: () => void } | null>(null);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const { settings, updateSettings } = useStore();
-  const theme = settings.theme;
-
-  useEffect(() => {
-    const root = document.documentElement;
-    root.classList.toggle("dark", theme === "dark");
-  }, [theme]);
-
-  const toggle = useCallback(() => {
-    updateSettings({ theme: theme === "dark" ? "light" : "dark" });
-  }, [theme, updateSettings]);
+  // Hardcoded to light theme as dark mode is removed
+  const theme: Theme = "light";
+  const toggle = useCallback(() => {}, []);
 
   const value = useMemo(() => ({ theme, toggle }), [theme, toggle]);
 

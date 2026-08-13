@@ -51,7 +51,7 @@ const TESTIMONIALS = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="relative py-20 sm:py-28">
+    <section id="testimonials" className="relative py-12 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <FadeIn>
@@ -71,7 +71,7 @@ export function Testimonials() {
           </FadeIn>
         </div>
 
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 sm:mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map((t, i) => (
             <FadeIn key={t.name} delay={i * 0.06} className="h-full">
               <figure className="flex h-full flex-col rounded-2xl border border-[var(--border)] bg-[var(--card)] p-6 card-shadow transition-all duration-300 hover:-translate-y-1 hover:card-shadow-hover">

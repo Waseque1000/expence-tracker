@@ -98,7 +98,7 @@ export default function BudgetsPage() {
         >
           <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-amber-500" />
           <div>
-            <p className="text-sm font-semibold text-amber-600 dark:text-amber-400">
+            <p className="text-sm font-semibold text-amber-600">
               Budget alert: {overCount} {overCount === 1 ? "category is" : "categories are"} over budget
             </p>
             <p className="mt-0.5 text-xs text-[var(--muted-foreground)]">

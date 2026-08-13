@@ -23,7 +23,7 @@ const BARS = [34, 48, 30, 58, 44, 62, 38, 70, 52, 82, 64, 90];
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28">
+    <section className="relative overflow-hidden pt-28 pb-16 sm:pt-40 sm:pb-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <FadeIn>
@@ -33,7 +33,7 @@ export function Hero() {
             </Badge>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+            <h1 className="text-3xl font-bold tracking-tight sm:text-6xl text-balance">
               Every taka, <br className="hidden sm:block" />
               <span className="text-gradient">beautifully</span> accounted for
             </h1>
@@ -48,12 +48,12 @@ export function Hero() {
           <FadeIn delay={0.3}>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link href="/register" className="w-full sm:w-auto">
-                <Button variant="gradient" size="lg" className="w-full sm:w-auto">
+                <Button variant="gradient" size="lg" className="w-full sm:w-auto h-12 text-base">
                   Start free — no card needed
                 </Button>
               </Link>
               <Link href="/login" className="w-full sm:w-auto">
-                <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto h-12 text-base">
                   Live demo
                 </Button>
               </Link>
@@ -107,7 +107,7 @@ function DashboardPreview() {
           <Wallet className="h-4 w-4 text-[var(--primary)]" />
         </div>
 
-        <div className="grid grid-cols-3 gap-2 p-4 sm:gap-3 sm:p-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 p-3 sm:gap-3 sm:p-5">
           {STATS.map((s, i) => (
             <motion.div
               key={s.label}
@@ -128,8 +128,8 @@ function DashboardPreview() {
               <p
                 className={`mt-0.5 hidden text-xs font-medium sm:block ${
                   s.trend === "up"
-                    ? "text-rose-500 dark:text-rose-400"
-                    : "text-emerald-500 dark:text-emerald-400"
+                    ? "text-rose-500"
+                    : "text-emerald-500"
                 }`}
               >
                 {s.delta > 0 ? "+" : ""}
@@ -139,7 +139,7 @@ function DashboardPreview() {
           ))}
         </div>
 
-        <div className="grid gap-3 p-5 pt-0 sm:grid-cols-5">
+        <div className="flex flex-col gap-3 p-3 pt-0 sm:grid sm:grid-cols-5 sm:p-5 sm:pt-0">
           <div className="rounded-2xl border border-[var(--border)] bg-[var(--card)]/60 p-4 sm:col-span-3">
             <div className="mb-3 flex items-center justify-between">
               <div>

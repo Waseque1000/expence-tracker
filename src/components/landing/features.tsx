@@ -80,7 +80,7 @@ const FEATURES = [
 
 export function Features() {
   return (
-    <section id="features" className="relative py-20 sm:py-28">
+    <section id="features" className="relative py-12 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <FadeIn>
@@ -101,7 +101,7 @@ export function Features() {
           </FadeIn>
         </div>
 
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 sm:mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {FEATURES.map((f, i) => (
             <FadeIn key={f.title} delay={i * 0.06} className="h-full">
               <div className="group h-full rounded-2xl border border-[var(--border)] bg-[var(--card)] p-6 card-shadow transition-all duration-300 hover:-translate-y-1 hover:card-shadow-hover">

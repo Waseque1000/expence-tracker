@@ -2,11 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Menu, Moon, Sun, X } from "lucide-react";
 import Link from "next/link";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
-import { useTheme } from "@/lib/theme";
 import { cn } from "@/lib/utils";
 
 const LINKS = [
@@ -17,9 +15,7 @@ const LINKS = [
 ];
 
 export function Navbar() {
-  const { theme, toggle } = useTheme();
   const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -56,15 +52,8 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <button
-            onClick={toggle}
-            className="rounded-lg p-2 text-[var(--muted-foreground)] transition-colors hover:bg-[var(--muted)] hover:text-[var(--foreground)] cursor-pointer"
-            aria-label="Toggle theme"
-          >
-            {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </button>
           <Link href="/login" className="hidden sm:block">
-            <Button variant="ghost" className="text-sm">
+            <Button variant="ghost" className="text-sm h-9">
               Log in
             </Button>
           </Link>
@@ -73,48 +62,13 @@ export function Navbar() {
               Get started free
             </Button>
           </Link>
-          <button
-            onClick={() => setOpen(!open)}
-            className="rounded-lg p-2 text-[var(--muted-foreground)] hover:bg-[var(--muted)] md:hidden cursor-pointer"
-            aria-label="Menu"
-          >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
+          <Link href="/register" className="sm:hidden">
+            <Button variant="gradient" size="sm" className="h-8 text-xs px-3">
+              Get started
+            </Button>
+          </Link>
         </div>
       </div>
-
-      {open && (
-        <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
-          className="glass-strong overflow-hidden border-t border-[var(--border)] md:hidden"
-        >
-          <div className="flex flex-col gap-1 p-4">
-            {LINKS.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-[var(--muted)]"
-              >
-                {l.label}
-              </Link>
-            ))}
-            <div className="mt-2 flex gap-2">
-              <Link href="/login" className="flex-1">
-                <Button variant="outline" className="w-full">
-                  Log in
-                </Button>
-              </Link>
-              <Link href="/register" className="flex-1">
-                <Button variant="gradient" className="w-full">
-                  Get started
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </motion.div>
-      )}
     </motion.header>
   );
 }

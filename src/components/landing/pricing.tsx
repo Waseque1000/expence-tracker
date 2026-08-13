@@ -59,7 +59,7 @@ const PLANS = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="relative py-20 sm:py-28">
+    <section id="pricing" className="relative py-12 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <FadeIn>
@@ -79,7 +79,7 @@ export function Pricing() {
           </FadeIn>
         </div>
 
-        <div className="mx-auto mt-14 grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-10 sm:mt-14 grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {PLANS.map((p, i) => (
             <FadeIn key={p.name} delay={i * 0.1} className="h-full">
               <div
@@ -122,7 +122,7 @@ export function Pricing() {
                   <Link href="/register" className="mt-7">
                     <Button
                       variant={p.featured ? "gradient" : "outline"}
-                      className="w-full"
+                      className="w-full h-12 text-base"
                     >
                       {p.cta}
                     </Button>

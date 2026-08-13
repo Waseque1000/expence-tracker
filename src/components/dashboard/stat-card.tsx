@@ -43,8 +43,8 @@ export function StatCard({
             className={cn(
               "flex items-center gap-0.5 rounded-full px-2 py-0.5 text-xs font-medium",
               positive
-                ? "bg-emerald-500/12 text-emerald-600 dark:text-emerald-400"
-                : "bg-rose-500/12 text-rose-600 dark:text-rose-400"
+                ? "bg-emerald-500/12 text-emerald-600"
+                : "bg-rose-500/12 text-rose-600"
             )}
           >
             {positive ? <TrendingUp className="h-3 w-3" /> : <TrendingDown className="h-3 w-3" />}

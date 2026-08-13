@@ -107,7 +107,7 @@ export default function IncomePage() {
           animate={{ opacity: 1, y: 0 }}
           className="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-5"
         >
-          <div className="flex items-center gap-2 text-sm text-emerald-600 dark:text-emerald-400">
+          <div className="flex items-center gap-2 text-sm text-emerald-600">
             <Wallet className="h-4 w-4" />
             This month
           </div>

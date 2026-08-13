@@ -85,7 +85,7 @@ export default function ForgotPasswordPage() {
           </Button>
         </form>
       ) : (
-        <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/10 p-5 text-sm text-emerald-600 dark:text-emerald-400">
+        <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/10 p-5 text-sm text-emerald-600">
           Check your inbox. The link expires in 30 minutes.
         </div>
       )}

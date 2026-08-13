@@ -216,9 +216,9 @@ export default function AnalyticsPage() {
                 <p
                   className={cn(
                     "text-sm font-semibold",
-                    ins.tone === "warning" && "text-amber-600 dark:text-amber-400",
-                    ins.tone === "success" && "text-emerald-600 dark:text-emerald-400",
-                    ins.tone === "info" && "text-sky-600 dark:text-sky-400"
+                    ins.tone === "warning" && "text-amber-600",
+                    ins.tone === "success" && "text-emerald-600",
+                    ins.tone === "info" && "text-sky-600"
                   )}
                 >
                   {ins.title}

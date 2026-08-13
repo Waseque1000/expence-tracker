@@ -22,7 +22,7 @@ const COLUMNS = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-[var(--border)] py-14">
+    <footer className="border-t border-[var(--border)] py-10 sm:py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid gap-10 md:grid-cols-6">
           <div className="md:col-span-2">
