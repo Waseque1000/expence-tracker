@@ -17,6 +17,7 @@ import { Badge } from "@/components/ui/badge";
 import { EmptyState } from "@/components/ui/empty";
 import { ExpenseForm } from "@/components/dashboard/expense-form";
 import { CategoryIcon } from "@/components/category-icon";
+import { PaymentBadge } from "@/components/dashboard/payment-badge";
 import { useStore } from "@/lib/store";
 import { useToast } from "@/components/ui/toast";
 import { CATEGORIES, CATEGORY_COLORS, PAYMENT_METHODS, type Expense } from "@/types";
@@ -182,10 +183,10 @@ export default function ExpensesPage() {
                       <p className="truncate text-sm font-medium">{e.title}</p>
                       {e.receipt && <Receipt className="h-3.5 w-3.5 shrink-0 text-[var(--muted-foreground)]" />}
                     </div>
-                    <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-[var(--muted-foreground)]">
+                    <div className="mt-1 flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-xs text-[var(--muted-foreground)]">
                       <span>{formatDate(e.date)}</span>
                       <span>·</span>
-                      <span>{e.paymentMethod}</span>
+                      <PaymentBadge method={e.paymentMethod} />
                       {e.tags.slice(0, 3).map((t) => (
                         <Badge key={t} variant="outline" className="px-1.5 py-0 text-[10px]">
                           #{t}

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { CategoryIcon } from "@/components/category-icon";
+import { PaymentBadge } from "@/components/dashboard/payment-badge";
 import { CATEGORY_COLORS, type Expense } from "@/types";
 import { formatDate } from "@/lib/format";
 import { useStore } from "@/lib/store";
@@ -34,10 +35,10 @@ export function TransactionRow({
       </span>
       <div className="min-w-0 flex-1">
         <p className="truncate text-sm font-medium">{expense.title}</p>
-        <div className="flex items-center gap-1.5 text-xs text-[var(--muted-foreground)]">
+        <div className="mt-0.5 flex items-center gap-2 text-xs text-[var(--muted-foreground)]">
           <span>{formatDate(expense.date)}</span>
           <span>·</span>
-          <span>{expense.paymentMethod}</span>
+          <PaymentBadge method={expense.paymentMethod} />
         </div>
       </div>
       {onEdit && (

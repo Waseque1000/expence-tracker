@@ -1,13 +1,20 @@
 export type Category =
+  | "House Rent"
+  | "Fixed Bazar"
+  | "Utilities Bill"
   | "Food"
   | "Transport"
   | "Shopping"
   | "Bills"
   | "Medical"
-  | "Entertainment"
-  | "Travel"
   | "Education"
+  | "Entertainment"
+  | "Family & Care"
+  | "EMI & Loans"
   | "Investment"
+  | "Travel"
+  | "Charity & Gifts"
+  | "Maintenance"
   | "Others";
 
 export type PaymentMethod =
@@ -96,15 +103,22 @@ export type UserSettings = {
 };
 
 export const CATEGORIES: Category[] = [
+  "House Rent",
+  "Fixed Bazar",
+  "Utilities Bill",
   "Food",
   "Transport",
   "Shopping",
   "Bills",
   "Medical",
-  "Entertainment",
-  "Travel",
   "Education",
+  "Entertainment",
+  "Family & Care",
+  "EMI & Loans",
   "Investment",
+  "Travel",
+  "Charity & Gifts",
+  "Maintenance",
   "Others",
 ];
 
@@ -129,27 +143,41 @@ export const INCOME_SOURCES: IncomeSource[] = [
 ];
 
 export const CATEGORY_COLORS: Record<Category, string> = {
-  Food: "#f59e0b",
+  "House Rent": "#0284c7",
+  "Fixed Bazar": "#16a34a",
+  "Utilities Bill": "#f59e0b",
+  Food: "#ea580c",
   Transport: "#3b82f6",
   Shopping: "#ec4899",
   Bills: "#8b5cf6",
   Medical: "#ef4444",
-  Entertainment: "#14b8a6",
-  Travel: "#06b6d4",
   Education: "#6366f1",
+  Entertainment: "#14b8a6",
+  "Family & Care": "#f43f5e",
+  "EMI & Loans": "#dc2626",
   Investment: "#10b981",
-  Others: "#78716c",
+  Travel: "#06b6d4",
+  "Charity & Gifts": "#84cc16",
+  Maintenance: "#78716c",
+  Others: "#64748b",
 };
 
 export const CATEGORY_ICONS: Record<Category, string> = {
+  "House Rent": "Home",
+  "Fixed Bazar": "ShoppingBag",
+  "Utilities Bill": "Zap",
   Food: "Utensils",
   Transport: "Car",
-  Shopping: "ShoppingBag",
+  Shopping: "ShoppingCart",
   Bills: "Receipt",
   Medical: "HeartPulse",
-  Entertainment: "Clapperboard",
-  Travel: "Plane",
   Education: "GraduationCap",
+  Entertainment: "Clapperboard",
+  "Family & Care": "Sparkles",
+  "EMI & Loans": "CreditCard",
   Investment: "TrendingUp",
+  Travel: "Plane",
+  "Charity & Gifts": "Gift",
+  Maintenance: "Wrench",
   Others: "MoreHorizontal",
 };
